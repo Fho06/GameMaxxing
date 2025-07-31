@@ -1,0 +1,3 @@
+/Users/fho/CLionProjects/GameMaxxing/cmake-build-debug/CMakeFiles/GameMaxxing.dir
+/Users/fho/CLionProjects/GameMaxxing/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/fho/CLionProjects/GameMaxxing/cmake-build-debug/CMakeFiles/rebuild_cache.dir

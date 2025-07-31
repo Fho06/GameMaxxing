@@ -1,0 +1,7 @@
+# ninja log v6
+3	82	1753928523352734952	build.ninja	104deaa190b24087
+897	1140	1753927854193533377	GameMaxxing_main	d4e621822dda654a
+2	1676	1753928525494060287	CMakeFiles/GameMaxxing.dir/Algorithms/Game.cpp.o	2e080f32d5bc56e
+4	1951	1753928525496652378	CMakeFiles/GameMaxxing.dir/Algorithms/Heap.cpp.o	596f1178905e1d65
+11	2069	1753928525502784258	CMakeFiles/GameMaxxing.dir/main.cpp.o	a12b9a622b5d10b9
+2069	2328	1753928527561622865	GameMaxxing	8f63b4f2dfa8fc25
