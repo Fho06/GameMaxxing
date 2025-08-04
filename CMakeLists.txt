@@ -1,13 +1,33 @@
-cmake_minimum_required(VERSION 3.30)
+cmake_minimum_required(VERSION 3.16)
 project(GameMaxxing)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
-include_directories(Algorithms)
+add_definitions(-DSFML_STATIC)
 
-add_executable(GameMaxxing
-    Algorithms/Game.cpp
-    Algorithms/Game.h
-    Algorithms/Heap.cpp
-    Algorithms/Heap.h
-    main.cpp)
+include_directories(
+    src
+    SFML/include
+)
+
+link_directories(
+    SFML/lib
+    )
+
+add_executable(
+    GameMaxxing
+    src/DatasetHLTB.cpp
+    src/DatasetHLTB.h
+    src/main.cpp)
+
+target_link_libraries(
+    GameMaxxing
+    sfml-graphics-s
+    sfml-window-s
+    sfml-system-s
+    freetype
+    opengl32
+    winmm
+    gdi32
+    user32
+)
