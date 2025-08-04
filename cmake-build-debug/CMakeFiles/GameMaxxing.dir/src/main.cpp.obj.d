@@ -302,4 +302,6 @@ CMakeFiles/GameMaxxing.dir/src/main.cpp.obj: \
  C:/Users/diego/Documents/GitHub/GameMaxxing/SFMLObjects/Button.h \
  C:/mingw/mingw64/include/c++/14.2.0/functional \
  C:/mingw/mingw64/include/c++/14.2.0/bits/std_function.h \
+ C:/Users/diego/Documents/GitHub/GameMaxxing/SFMLObjects/GameCard.h \
+ C:/Users/diego/Documents/GitHub/GameMaxxing/SFMLObjects/Button.h \
  C:/Users/diego/Documents/GitHub/GameMaxxing/SFMLObjects/Textbox.h

@@ -1556,6 +1556,7 @@ CMakeFiles/GameMaxxing.dir/src/main.cpp.obj: C:/Users/diego/Documents/GitHub/Gam
   C:/Users/diego/Documents/GitHub/GameMaxxing/SFML/include/SFML/Window/WindowEnums.hpp \
   C:/Users/diego/Documents/GitHub/GameMaxxing/SFML/include/SFML/Window/WindowHandle.hpp \
   C:/Users/diego/Documents/GitHub/GameMaxxing/SFMLObjects/Button.h \
+  C:/Users/diego/Documents/GitHub/GameMaxxing/SFMLObjects/GameCard.h \
   C:/Users/diego/Documents/GitHub/GameMaxxing/SFMLObjects/Textbox.h \
   C:/Users/diego/Documents/GitHub/GameMaxxing/src/Game.h \
   C:/mingw/mingw64/include/c++/14.2.0/array \

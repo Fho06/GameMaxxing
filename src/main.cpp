@@ -5,6 +5,7 @@
 #include "Heap.h"
 #include "RedBlackTree.h"
 #include "../SFMLObjects/Button.h"
+#include "../SFMLObjects/GameCard.h"
 #include "../SFMLObjects/Textbox.h"
 
 // Kinda wish I didn't have to make this global but oh well
@@ -33,6 +34,24 @@ void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
     title.setFillColor(backgroundColor);
     title.setOutlineColor(outlineColor);
 
+    GameCard card1(30,130,300,600,titleFont,searchFont);
+    card1.setColors(backgroundColor,darkBackgroundColor,outlineColor);
+
+    GameCard card2(690,130,300,600,titleFont,searchFont);
+    card2.setColors(backgroundColor,darkBackgroundColor,outlineColor);
+
+    GameCard card3(360,130,300,600,titleFont,searchFont);
+    card3.setColors(backgroundColor,darkBackgroundColor,outlineColor);
+
+    if (searchMode == 0) {
+        weightedGame gameToInsert = gameHeap.getMax();
+        card1.setText(gameToInsert.game.gameName, gameToInsert.game.desc);
+        gameToInsert = gameHeap.getMax();
+        card2.setText(gameToInsert.game.gameName, gameToInsert.game.desc);
+        gameToInsert = gameHeap.getMax();
+        card3.setText(gameToInsert.game.gameName, gameToInsert.game.desc);
+    }
+
     while (window->isOpen()) {
         while (const std::optional event = window->pollEvent()) {
             if (event->is < sf::Event::Closed>()) {
@@ -41,6 +60,20 @@ void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
             else if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
                 // Mouse Events
                 sf::Vector2i pos = sf::Mouse::getPosition(*window);
+                if (searchMode == 0) {
+                    if (card1.checkClick(sf::Vector2f(pos))) {
+                        weightedGame gameToInsert = gameHeap.getMax();
+                        card1.setText(gameToInsert.game.gameName, gameToInsert.game.desc);
+                    }
+                    else if (card2.checkClick(sf::Vector2f(pos))) {
+                        weightedGame gameToInsert = gameHeap.getMax();
+                        card2.setText(gameToInsert.game.gameName, gameToInsert.game.desc);
+                    }
+                    else if (card3.checkClick(sf::Vector2f(pos))) {
+                        weightedGame gameToInsert = gameHeap.getMax();
+                        card3.setText(gameToInsert.game.gameName, gameToInsert.game.desc);
+                    }
+                }
             }
             else if (const auto keyPressed = event->getIf<sf::Event::KeyPressed>()) {
                 // Keypress Events
@@ -56,7 +89,10 @@ void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
         // Drawing Window
         window->clear(darkBackgroundColor);
 
-
+        window->draw(title);
+        card1.draw(*window);
+        card2.draw(*window);
+        card3.draw(*window);
 
         window->display();
     }
@@ -159,7 +195,7 @@ int main(){
 
         if (searchMode == 0) {
             for (auto g : mainDataset.getDataset()) {
-                gameHeap.insert(weightedGame(g, targetGame.reccLevel(g)));
+                gameHeap.insert(weightedGame(g, targetGame.reccLevel(g) * 1000));
             }
         } else if(searchMode == 1) {
             for (auto g : mainDataset.getDataset()) {

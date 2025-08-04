@@ -10,9 +10,13 @@ private:
     sf::RectangleShape mainBody;
     sf::Text gameName;
     sf::Text gameLink;
-    Button refresh;
+    sf::RectangleShape refreshButton;
 public:
-
+    GameCard(float x, float y, float width, float height, sf::Font& titleFont, sf::Font& mainTextFont);
+    void draw(sf::RenderWindow& window);
+    void setColors(sf::Color color1, sf::Color color2, sf::Color color3);
+    void setText(std::string title, std::string link);
+    bool checkClick(sf::Vector2f mousePos);
 };
 
 
