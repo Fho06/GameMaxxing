@@ -50,10 +50,18 @@ void GameCard::setColors(sf::Color color1, sf::Color color2, sf::Color color3) {
 void GameCard::setText(std::string title, std::string link) {
     gameName.setString(title);
     std::string description = "";
+    int lineSize = 0;
     for (auto c : link) {
-        des
+        if (lineSize > 50 && c == ' ') {
+            lineSize = 0;
+            description += "\n";
+        }
+        else {
+            description += c;
+            lineSize++;
+        }
     }
-    gameLink.setString();
+    gameLink.setString(description);
 }
 
 bool GameCard::checkClick(sf::Vector2f mousePos) {
