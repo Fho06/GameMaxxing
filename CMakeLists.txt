@@ -24,7 +24,9 @@ add_executable(
         "SFMLObjects/Textbox.cpp"
         "SFMLObjects/Textbox.h"
         "SFMLObjects/GameCard.cpp"
-        "SFMLObjects/GameCard.h")
+        "SFMLObjects/GameCard.h"
+        SFMLObjects/ToggleSwitch.cpp
+        SFMLObjects/ToggleSwitch.h)
 
 target_link_libraries(
     GameMaxxing

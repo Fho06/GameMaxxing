@@ -15,7 +15,7 @@ void Button::setColor(sf::Color color, sf::Color outlineColor) {
     buttonRect.setOutlineColor(outlineColor);
 }
 
-void Button::setOnClick(std::function<void()> callback) {
+void Button::setOnClick(std::function<void(sf::RenderWindow&)> callback) {
     onClick = callback;
 }
 
@@ -23,9 +23,9 @@ void Button::draw(sf::RenderWindow &window) {
     window.draw(buttonRect);
 }
 
-void Button::checkClick(sf::Vector2i clickPos) {
+void Button::checkClick(sf::Vector2i clickPos, sf::RenderWindow &window) {
     if (buttonRect.getGlobalBounds().contains(sf::Vector2<float>(clickPos))) {
-        onClick();
+        onClick(window);
     }
 }
 
