@@ -14,7 +14,7 @@ private:
 
 public:
   void insert(const weightedGame& dataPoint);
-  weightedGame extractMax();
+  weightedGame getMax();
   bool isEmpty() const;
 };
 
