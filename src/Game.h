@@ -1,14 +1,27 @@
 #ifndef GAME_H
 #define GAME_H
 #include <string>
+#include <vector>
 using namespace std;
 
 struct Game {
-  string title, genre, developers;
+public:
+    std::string gameName;
+    int reviewCount;
+    int reviewScore;
+    std::string imageUrl;
+    std::string type;
+    std::string desc;
+    std::string dev;
+    std::vector<std::string> platform;
+    std::vector<std::string> genre;
+    int releaseYear;
 
-  Game (string title, string genre, string developers)
-        : title(title), genre(genre), developers(developers){}
+    //Game (string title, string genre, string developers)
+    //    : title(title), genre(genre), developers(developers){}
 
+    //CHECKS HOW CLOSE TO THE CATEGORIES A GAME IS
+    float reccLevel (Game g2);
 };
 
 struct weightedGame {
@@ -23,8 +36,6 @@ struct weightedGame {
     }
 };
 
-//CHECKS HOW CLOSE TO THE CATEGORIES A GAME IS
-int reccLevel (const Game &game, const string &inputGenre, const string &inputDev);
 
 
 #endif //GAME_H

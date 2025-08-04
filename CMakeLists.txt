@@ -15,10 +15,10 @@ link_directories(
     )
 
 add_executable(
-    GameMaxxing
-    src/DatasetHLTB.cpp
-    src/DatasetHLTB.h
-    src/main.cpp
+        GameMaxxing
+        src/DatasetHLTB.cpp
+        src/DatasetHLTB.h
+        src/main.cpp
         "SFMLObjects/Button.cpp"
         "SFMLObjects/Button.h"
         "SFMLObjects/Textbox.cpp"
@@ -26,7 +26,14 @@ add_executable(
         "SFMLObjects/GameCard.cpp"
         "SFMLObjects/GameCard.h"
         SFMLObjects/ToggleSwitch.cpp
-        SFMLObjects/ToggleSwitch.h)
+        SFMLObjects/ToggleSwitch.h
+        src/RedBlackTree.cpp
+        src/RedBlackTree.h
+        src/Heap.cpp
+        src/Heap.h
+        src/game.cpp
+        src/game.h
+        )
 
 target_link_libraries(
     GameMaxxing

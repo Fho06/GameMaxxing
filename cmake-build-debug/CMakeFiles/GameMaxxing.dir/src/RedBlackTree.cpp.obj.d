@@ -1,17 +1,16 @@
-CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj: \
- C:\Users\diego\Documents\GitHub\GameMaxxing\src\DatasetHLTB.cpp \
- C:\Users\diego\Documents\GitHub\GameMaxxing\src\DatasetHLTB.h \
- C:/mingw/mingw64/include/c++/14.2.0/iostream \
+CMakeFiles/GameMaxxing.dir/src/RedBlackTree.cpp.obj: \
+ C:\Users\diego\Documents\GitHub\GameMaxxing\src\RedBlackTree.cpp \
+ C:\Users\diego\Documents\GitHub\GameMaxxing\src\RedBlackTree.h \
+ C:\Users\diego\Documents\GitHub\GameMaxxing\src\Game.h \
+ C:/mingw/mingw64/include/c++/14.2.0/string \
  C:/mingw/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
  C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
  C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
  C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
  C:/mingw/mingw64/include/c++/14.2.0/pstl/pstl_config.h \
- C:/mingw/mingw64/include/c++/14.2.0/ostream \
- C:/mingw/mingw64/include/c++/14.2.0/ios \
- C:/mingw/mingw64/include/c++/14.2.0/iosfwd \
  C:/mingw/mingw64/include/c++/14.2.0/bits/stringfwd.h \
  C:/mingw/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/char_traits.h \
  C:/mingw/mingw64/include/c++/14.2.0/bits/postypes.h \
  C:/mingw/mingw64/include/c++/14.2.0/cwchar \
  C:/mingw/mingw64/x86_64-w64-mingw32/include/wchar.h \
@@ -27,59 +26,27 @@ CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj: \
  C:/mingw/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
  C:/mingw/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
  C:/mingw/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
- C:/mingw/mingw64/include/c++/14.2.0/exception \
- C:/mingw/mingw64/include/c++/14.2.0/bits/exception.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/version.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/exception_defines.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
- C:/mingw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/stddef.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
- C:/mingw/mingw64/include/c++/14.2.0/typeinfo \
- C:/mingw/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
- C:/mingw/mingw64/include/c++/14.2.0/new \
- C:/mingw/mingw64/include/c++/14.2.0/bits/move.h \
  C:/mingw/mingw64/include/c++/14.2.0/type_traits \
- C:/mingw/mingw64/include/c++/14.2.0/bits/nested_exception.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/char_traits.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/version.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/allocator.h \
+ C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/new_allocator.h \
+ C:/mingw/mingw64/include/c++/14.2.0/new \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/exception.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/functexcept.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/exception_defines.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/move.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
  C:/mingw/mingw64/include/c++/14.2.0/bits/localefwd.h \
  C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
  C:/mingw/mingw64/include/c++/14.2.0/clocale \
  C:/mingw/mingw64/x86_64-w64-mingw32/include/locale.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
  C:/mingw/mingw64/x86_64-w64-mingw32/include/stdio.h \
  C:/mingw/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/mingw/mingw64/include/c++/14.2.0/iosfwd \
  C:/mingw/mingw64/include/c++/14.2.0/cctype \
  C:/mingw/mingw64/x86_64-w64-mingw32/include/ctype.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/ios_base.h \
- C:/mingw/mingw64/include/c++/14.2.0/ext/atomicity.h \
- C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
- C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/pthread.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/errno.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/sys/types.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/process.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h \
- C:/mingw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
- C:/mingw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/limits.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/signal.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/pthread_signal.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/time.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/_timeval.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
- C:/mingw/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h \
- C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/locale_classes.h \
- C:/mingw/mingw64/include/c++/14.2.0/string \
- C:/mingw/mingw64/include/c++/14.2.0/bits/allocator.h \
- C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/new_allocator.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/functexcept.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
  C:/mingw/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
  C:/mingw/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
  C:/mingw/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
@@ -109,14 +76,19 @@ CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj: \
  C:/mingw/mingw64/include/c++/14.2.0/bits/stl_construct.h \
  C:/mingw/mingw64/include/c++/14.2.0/string_view \
  C:/mingw/mingw64/include/c++/14.2.0/bits/functional_hash.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
  C:/mingw/mingw64/include/c++/14.2.0/bits/string_view.tcc \
  C:/mingw/mingw64/include/c++/14.2.0/ext/string_conversions.h \
  C:/mingw/mingw64/include/c++/14.2.0/cstdlib \
  C:/mingw/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+ C:/mingw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
+ C:/mingw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/limits.h \
  C:/mingw/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
  C:/mingw/mingw64/include/c++/14.2.0/stdlib.h \
  C:/mingw/mingw64/x86_64-w64-mingw32/include/malloc.h \
  C:/mingw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/errno.h \
  C:/mingw/mingw64/include/c++/14.2.0/bits/std_abs.h \
  C:/mingw/mingw64/include/c++/14.2.0/cstdio \
  C:/mingw/mingw64/include/c++/14.2.0/cerrno \
@@ -124,9 +96,43 @@ CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj: \
  C:/mingw/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
  C:/mingw/mingw64/include/c++/14.2.0/bits/memory_resource.h \
  C:/mingw/mingw64/include/c++/14.2.0/cstddef \
+ C:/mingw/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/stddef.h \
  C:/mingw/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
  C:/mingw/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
  C:/mingw/mingw64/include/c++/14.2.0/tuple \
+ C:/mingw/mingw64/include/c++/14.2.0/vector \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/stl_vector.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/vector.tcc \
+ C:/mingw/mingw64/include/c++/14.2.0/iostream \
+ C:/mingw/mingw64/include/c++/14.2.0/ostream \
+ C:/mingw/mingw64/include/c++/14.2.0/ios \
+ C:/mingw/mingw64/include/c++/14.2.0/exception \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+ C:/mingw/mingw64/include/c++/14.2.0/typeinfo \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/nested_exception.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/ios_base.h \
+ C:/mingw/mingw64/include/c++/14.2.0/ext/atomicity.h \
+ C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
+ C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/pthread.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/process.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/signal.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/pthread_signal.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/time.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/_timeval.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
+ C:/mingw/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h \
+ C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/locale_classes.h \
  C:/mingw/mingw64/include/c++/14.2.0/bits/locale_classes.tcc \
  C:/mingw/mingw64/include/c++/14.2.0/system_error \
  C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
@@ -144,29 +150,4 @@ CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj: \
  C:/mingw/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
  C:/mingw/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/mingw/mingw64/include/c++/14.2.0/istream \
- C:/mingw/mingw64/include/c++/14.2.0/bits/istream.tcc \
- C:/mingw/mingw64/include/c++/14.2.0/fstream \
- C:/mingw/mingw64/include/c++/14.2.0/bits/codecvt.h \
- C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
- C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/fstream.tcc \
- C:/mingw/mingw64/include/c++/14.2.0/unordered_map \
- C:/mingw/mingw64/include/c++/14.2.0/bits/unordered_map.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/hashtable.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
- C:/mingw/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/node_handle.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/erase_if.h \
- C:/mingw/mingw64/include/c++/14.2.0/sstream \
- C:/mingw/mingw64/include/c++/14.2.0/bits/sstream.tcc \
- C:/mingw/mingw64/include/c++/14.2.0/set \
- C:/mingw/mingw64/include/c++/14.2.0/bits/stl_tree.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/stl_set.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/stl_multiset.h \
- C:/mingw/mingw64/include/c++/14.2.0/vector \
- C:/mingw/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/stl_vector.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
- C:/mingw/mingw64/include/c++/14.2.0/bits/vector.tcc \
- C:/Users/diego/Documents/GitHub/GameMaxxing/src/Game.h
+ C:/mingw/mingw64/include/c++/14.2.0/bits/istream.tcc

@@ -248,6 +248,78 @@ src/DatasetHLTB.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.s
 .PHONY : src/DatasetHLTB.cpp.s
 
+src/Game.obj: src/Game.cpp.obj
+.PHONY : src/Game.obj
+
+# target to build an object file
+src/Game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/src/Game.cpp.obj
+.PHONY : src/Game.cpp.obj
+
+src/Game.i: src/Game.cpp.i
+.PHONY : src/Game.i
+
+# target to preprocess a source file
+src/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/src/Game.cpp.i
+.PHONY : src/Game.cpp.i
+
+src/Game.s: src/Game.cpp.s
+.PHONY : src/Game.s
+
+# target to generate assembly for a file
+src/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/src/Game.cpp.s
+.PHONY : src/Game.cpp.s
+
+src/Heap.obj: src/Heap.cpp.obj
+.PHONY : src/Heap.obj
+
+# target to build an object file
+src/Heap.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/src/Heap.cpp.obj
+.PHONY : src/Heap.cpp.obj
+
+src/Heap.i: src/Heap.cpp.i
+.PHONY : src/Heap.i
+
+# target to preprocess a source file
+src/Heap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/src/Heap.cpp.i
+.PHONY : src/Heap.cpp.i
+
+src/Heap.s: src/Heap.cpp.s
+.PHONY : src/Heap.s
+
+# target to generate assembly for a file
+src/Heap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/src/Heap.cpp.s
+.PHONY : src/Heap.cpp.s
+
+src/RedBlackTree.obj: src/RedBlackTree.cpp.obj
+.PHONY : src/RedBlackTree.obj
+
+# target to build an object file
+src/RedBlackTree.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/src/RedBlackTree.cpp.obj
+.PHONY : src/RedBlackTree.cpp.obj
+
+src/RedBlackTree.i: src/RedBlackTree.cpp.i
+.PHONY : src/RedBlackTree.i
+
+# target to preprocess a source file
+src/RedBlackTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/src/RedBlackTree.cpp.i
+.PHONY : src/RedBlackTree.cpp.i
+
+src/RedBlackTree.s: src/RedBlackTree.cpp.s
+.PHONY : src/RedBlackTree.s
+
+# target to generate assembly for a file
+src/RedBlackTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/src/RedBlackTree.cpp.s
+.PHONY : src/RedBlackTree.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -296,6 +368,15 @@ help:
 	@echo ... src/DatasetHLTB.obj
 	@echo ... src/DatasetHLTB.i
 	@echo ... src/DatasetHLTB.s
+	@echo ... src/Game.obj
+	@echo ... src/Game.i
+	@echo ... src/Game.s
+	@echo ... src/Heap.obj
+	@echo ... src/Heap.i
+	@echo ... src/Heap.s
+	@echo ... src/RedBlackTree.obj
+	@echo ... src/RedBlackTree.i
+	@echo ... src/RedBlackTree.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

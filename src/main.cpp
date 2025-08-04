@@ -1,13 +1,65 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+
+#include "DatasetHLTB.h"
+#include "Heap.h"
+#include "RedBlackTree.h"
 #include "../SFMLObjects/Button.h"
 #include "../SFMLObjects/Textbox.h"
 
 // Kinda wish I didn't have to make this global but oh well
 int searchMode = 0;
 
-void gameRecPage() {
+void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
+    // Window Configs
+    unsigned int width = 1024;
+    unsigned int height = 768;
+    const sf::Color backgroundColor = sf::Color(60, 60, 60);
+    const sf::Color darkBackgroundColor = sf::Color(45, 45, 45);
+    const sf::Color outlineColor = sf::Color(70, 130, 180);
 
+    auto* window = new sf::RenderWindow(sf::VideoMode({ width, height }), "GameMaxxing");
+
+    // Create objects
+    sf::Font titleFont;
+    titleFont.openFromFile("../resources/Debrosee-ALPnL.ttf");
+
+    sf::Font searchFont;
+    searchFont.openFromFile("../resources/arial.ttf");
+
+    sf::Text title(titleFont, targetGame, 75);
+    title.setPosition(sf::Vector2f(40, 500));
+    title.setOutlineThickness(2);
+    title.setFillColor(backgroundColor);
+    title.setOutlineColor(outlineColor);
+
+    while (window->isOpen()) {
+        while (const std::optional event = window->pollEvent()) {
+            if (event->is < sf::Event::Closed>()) {
+                window->close();
+            }
+            else if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+                // Mouse Events
+                sf::Vector2i pos = sf::Mouse::getPosition(*window);
+            }
+            else if (const auto keyPressed = event->getIf<sf::Event::KeyPressed>()) {
+                // Keypress Events
+                if (keyPressed->scancode == sf::Keyboard::Scancode::Escape) {
+                    window->close();
+                }
+            }
+            else if (const auto textEntered = event->getIf<sf::Event::TextEntered>()){
+
+            }
+        }
+
+        // Drawing Window
+        window->clear(darkBackgroundColor);
+
+
+
+        window->display();
+    }
 }
 
 void searchButtonOnClick(sf::RenderWindow &window) {
@@ -86,13 +138,40 @@ std::string titlePage() {
 
 int main(){
     // Title screen with searchbar
-    auto titlePageOutput = titlePage();
+    std::string titlePageOutput = titlePage();
 
-    
+    // Get data from dataset
+    DatasetHLTB mainDataset("../resources/dataset/hltb_data.csv");
 
+    Game targetGame;
+    bool gameFound = false;
 
+    for (auto game : mainDataset.getDataset()) {
+        if (game.gameName == titlePageOutput) {
+            targetGame = game;
+            gameFound = true;
+        }
+    }
 
-    gameRecPage(titlePageOutput);
+    if (gameFound) {
+        Heap gameHeap;
+        RedBlackTree gameTree;
+
+        if (searchMode == 0) {
+            for (auto g : mainDataset.getDataset()) {
+                gameHeap.insert(weightedGame(g, targetGame.reccLevel(g)));
+            }
+        } else if(searchMode == 1) {
+            for (auto g : mainDataset.getDataset()) {
+                gameTree.insert(weightedGame(g, targetGame.reccLevel(g)));
+            }
+        }
+
+        gameRecPage(titlePageOutput, gameHeap, gameTree);
+    }
+    else {
+        std::cout << "Game not found." << std::endl;
+    }
 
     return 0;
 }

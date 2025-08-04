@@ -286,6 +286,19 @@ CMakeFiles/GameMaxxing.dir/src/main.cpp.obj: \
  C:/Users/diego/Documents/GitHub/GameMaxxing/SFML/include/SFML/System/InputStream.hpp \
  C:/Users/diego/Documents/GitHub/GameMaxxing/SFML/include/SFML/System/MemoryInputStream.hpp \
  C:/Users/diego/Documents/GitHub/GameMaxxing/SFML/include/SFML/System/Sleep.hpp \
+ C:\Users\diego\Documents\GitHub\GameMaxxing\src\DatasetHLTB.h \
+ C:/mingw/mingw64/include/c++/14.2.0/fstream \
+ C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/mingw/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/fstream.tcc \
+ C:/mingw/mingw64/include/c++/14.2.0/set \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/stl_tree.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/stl_set.h \
+ C:/mingw/mingw64/include/c++/14.2.0/bits/stl_multiset.h \
+ C:/Users/diego/Documents/GitHub/GameMaxxing/src/Game.h \
+ C:\Users\diego\Documents\GitHub\GameMaxxing\src\Heap.h \
+ C:\Users\diego\Documents\GitHub\GameMaxxing\src\Game.h \
+ C:\Users\diego\Documents\GitHub\GameMaxxing\src\RedBlackTree.h \
  C:/Users/diego/Documents/GitHub/GameMaxxing/SFMLObjects/Button.h \
  C:/mingw/mingw64/include/c++/14.2.0/functional \
  C:/mingw/mingw64/include/c++/14.2.0/bits/std_function.h \

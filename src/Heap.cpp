@@ -1,4 +1,5 @@
 #include "Heap.h"
+#include <stdexcept>
 
 void Heap::heapUp(int i) {
     while (i > 0) {
@@ -42,7 +43,7 @@ void Heap::insert(const weightedGame& dataPoint) {
 
 weightedGame Heap::getMax() {
     if (isEmpty()) {
-        throw runtime_error("Heap is empty");
+        throw std::runtime_error("Heap is empty");
     }
 
     weightedGame max = data[0];
