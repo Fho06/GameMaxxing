@@ -128,6 +128,78 @@ GameMaxxing/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/build
 .PHONY : GameMaxxing/fast
 
+SFMLObjects/Button.obj: SFMLObjects/Button.cpp.obj
+.PHONY : SFMLObjects/Button.obj
+
+# target to build an object file
+SFMLObjects/Button.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.obj
+.PHONY : SFMLObjects/Button.cpp.obj
+
+SFMLObjects/Button.i: SFMLObjects/Button.cpp.i
+.PHONY : SFMLObjects/Button.i
+
+# target to preprocess a source file
+SFMLObjects/Button.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.i
+.PHONY : SFMLObjects/Button.cpp.i
+
+SFMLObjects/Button.s: SFMLObjects/Button.cpp.s
+.PHONY : SFMLObjects/Button.s
+
+# target to generate assembly for a file
+SFMLObjects/Button.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.s
+.PHONY : SFMLObjects/Button.cpp.s
+
+SFMLObjects/GameCard.obj: SFMLObjects/GameCard.cpp.obj
+.PHONY : SFMLObjects/GameCard.obj
+
+# target to build an object file
+SFMLObjects/GameCard.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.obj
+.PHONY : SFMLObjects/GameCard.cpp.obj
+
+SFMLObjects/GameCard.i: SFMLObjects/GameCard.cpp.i
+.PHONY : SFMLObjects/GameCard.i
+
+# target to preprocess a source file
+SFMLObjects/GameCard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.i
+.PHONY : SFMLObjects/GameCard.cpp.i
+
+SFMLObjects/GameCard.s: SFMLObjects/GameCard.cpp.s
+.PHONY : SFMLObjects/GameCard.s
+
+# target to generate assembly for a file
+SFMLObjects/GameCard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.s
+.PHONY : SFMLObjects/GameCard.cpp.s
+
+SFMLObjects/Textbox.obj: SFMLObjects/Textbox.cpp.obj
+.PHONY : SFMLObjects/Textbox.obj
+
+# target to build an object file
+SFMLObjects/Textbox.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.obj
+.PHONY : SFMLObjects/Textbox.cpp.obj
+
+SFMLObjects/Textbox.i: SFMLObjects/Textbox.cpp.i
+.PHONY : SFMLObjects/Textbox.i
+
+# target to preprocess a source file
+SFMLObjects/Textbox.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.i
+.PHONY : SFMLObjects/Textbox.cpp.i
+
+SFMLObjects/Textbox.s: SFMLObjects/Textbox.cpp.s
+.PHONY : SFMLObjects/Textbox.s
+
+# target to generate assembly for a file
+SFMLObjects/Textbox.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.s
+.PHONY : SFMLObjects/Textbox.cpp.s
+
 src/DatasetHLTB.obj: src/DatasetHLTB.cpp.obj
 .PHONY : src/DatasetHLTB.obj
 
@@ -185,6 +257,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... GameMaxxing
+	@echo ... SFMLObjects/Button.obj
+	@echo ... SFMLObjects/Button.i
+	@echo ... SFMLObjects/Button.s
+	@echo ... SFMLObjects/GameCard.obj
+	@echo ... SFMLObjects/GameCard.i
+	@echo ... SFMLObjects/GameCard.s
+	@echo ... SFMLObjects/Textbox.obj
+	@echo ... SFMLObjects/Textbox.i
+	@echo ... SFMLObjects/Textbox.s
 	@echo ... src/DatasetHLTB.obj
 	@echo ... src/DatasetHLTB.i
 	@echo ... src/DatasetHLTB.s

@@ -18,7 +18,13 @@ add_executable(
     GameMaxxing
     src/DatasetHLTB.cpp
     src/DatasetHLTB.h
-    src/main.cpp)
+    src/main.cpp
+        "SFMLObjects/Button.cpp"
+        "SFMLObjects/Button.h"
+        "SFMLObjects/Textbox.cpp"
+        "SFMLObjects/Textbox.h"
+        "SFMLObjects/GameCard.cpp"
+        "SFMLObjects/GameCard.h")
 
 target_link_libraries(
     GameMaxxing

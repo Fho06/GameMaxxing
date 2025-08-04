@@ -76,46 +76,97 @@ CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj: CMakeFiles/GameMaxxing.dir/i
 CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj: C:/Users/diego/Documents/GitHub/GameMaxxing/src/DatasetHLTB.cpp
 CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj: CMakeFiles/GameMaxxing.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\diego\Documents\GitHub\GameMaxxing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj -MF CMakeFiles\GameMaxxing.dir\src\DatasetHLTB.cpp.obj.d -o CMakeFiles\GameMaxxing.dir\src\DatasetHLTB.cpp.obj -c C:\Users\diego\Documents\GitHub\GameMaxxing\src\DatasetHLTB.cpp
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj -MF CMakeFiles\GameMaxxing.dir\src\DatasetHLTB.cpp.obj.d -o CMakeFiles\GameMaxxing.dir\src\DatasetHLTB.cpp.obj -c C:\Users\diego\Documents\GitHub\GameMaxxing\src\DatasetHLTB.cpp
 
 CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\diego\Documents\GitHub\GameMaxxing\src\DatasetHLTB.cpp > CMakeFiles\GameMaxxing.dir\src\DatasetHLTB.cpp.i
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\diego\Documents\GitHub\GameMaxxing\src\DatasetHLTB.cpp > CMakeFiles\GameMaxxing.dir\src\DatasetHLTB.cpp.i
 
 CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\diego\Documents\GitHub\GameMaxxing\src\DatasetHLTB.cpp -o CMakeFiles\GameMaxxing.dir\src\DatasetHLTB.cpp.s
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\diego\Documents\GitHub\GameMaxxing\src\DatasetHLTB.cpp -o CMakeFiles\GameMaxxing.dir\src\DatasetHLTB.cpp.s
 
 CMakeFiles/GameMaxxing.dir/src/main.cpp.obj: CMakeFiles/GameMaxxing.dir/flags.make
 CMakeFiles/GameMaxxing.dir/src/main.cpp.obj: CMakeFiles/GameMaxxing.dir/includes_CXX.rsp
 CMakeFiles/GameMaxxing.dir/src/main.cpp.obj: C:/Users/diego/Documents/GitHub/GameMaxxing/src/main.cpp
 CMakeFiles/GameMaxxing.dir/src/main.cpp.obj: CMakeFiles/GameMaxxing.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\diego\Documents\GitHub\GameMaxxing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameMaxxing.dir/src/main.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameMaxxing.dir/src/main.cpp.obj -MF CMakeFiles\GameMaxxing.dir\src\main.cpp.obj.d -o CMakeFiles\GameMaxxing.dir\src\main.cpp.obj -c C:\Users\diego\Documents\GitHub\GameMaxxing\src\main.cpp
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameMaxxing.dir/src/main.cpp.obj -MF CMakeFiles\GameMaxxing.dir\src\main.cpp.obj.d -o CMakeFiles\GameMaxxing.dir\src\main.cpp.obj -c C:\Users\diego\Documents\GitHub\GameMaxxing\src\main.cpp
 
 CMakeFiles/GameMaxxing.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameMaxxing.dir/src/main.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\diego\Documents\GitHub\GameMaxxing\src\main.cpp > CMakeFiles\GameMaxxing.dir\src\main.cpp.i
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\diego\Documents\GitHub\GameMaxxing\src\main.cpp > CMakeFiles\GameMaxxing.dir\src\main.cpp.i
 
 CMakeFiles/GameMaxxing.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameMaxxing.dir/src/main.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\diego\Documents\GitHub\GameMaxxing\src\main.cpp -o CMakeFiles\GameMaxxing.dir\src\main.cpp.s
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\diego\Documents\GitHub\GameMaxxing\src\main.cpp -o CMakeFiles\GameMaxxing.dir\src\main.cpp.s
+
+CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.obj: CMakeFiles/GameMaxxing.dir/flags.make
+CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.obj: CMakeFiles/GameMaxxing.dir/includes_CXX.rsp
+CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.obj: C:/Users/diego/Documents/GitHub/GameMaxxing/SFMLObjects/Button.cpp
+CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.obj: CMakeFiles/GameMaxxing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\diego\Documents\GitHub\GameMaxxing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.obj"
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.obj -MF CMakeFiles\GameMaxxing.dir\SFMLObjects\Button.cpp.obj.d -o CMakeFiles\GameMaxxing.dir\SFMLObjects\Button.cpp.obj -c C:\Users\diego\Documents\GitHub\GameMaxxing\SFMLObjects\Button.cpp
+
+CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.i"
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\diego\Documents\GitHub\GameMaxxing\SFMLObjects\Button.cpp > CMakeFiles\GameMaxxing.dir\SFMLObjects\Button.cpp.i
+
+CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.s"
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\diego\Documents\GitHub\GameMaxxing\SFMLObjects\Button.cpp -o CMakeFiles\GameMaxxing.dir\SFMLObjects\Button.cpp.s
+
+CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.obj: CMakeFiles/GameMaxxing.dir/flags.make
+CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.obj: CMakeFiles/GameMaxxing.dir/includes_CXX.rsp
+CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.obj: C:/Users/diego/Documents/GitHub/GameMaxxing/SFMLObjects/Textbox.cpp
+CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.obj: CMakeFiles/GameMaxxing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\diego\Documents\GitHub\GameMaxxing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.obj"
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.obj -MF CMakeFiles\GameMaxxing.dir\SFMLObjects\Textbox.cpp.obj.d -o CMakeFiles\GameMaxxing.dir\SFMLObjects\Textbox.cpp.obj -c C:\Users\diego\Documents\GitHub\GameMaxxing\SFMLObjects\Textbox.cpp
+
+CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.i"
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\diego\Documents\GitHub\GameMaxxing\SFMLObjects\Textbox.cpp > CMakeFiles\GameMaxxing.dir\SFMLObjects\Textbox.cpp.i
+
+CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.s"
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\diego\Documents\GitHub\GameMaxxing\SFMLObjects\Textbox.cpp -o CMakeFiles\GameMaxxing.dir\SFMLObjects\Textbox.cpp.s
+
+CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.obj: CMakeFiles/GameMaxxing.dir/flags.make
+CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.obj: CMakeFiles/GameMaxxing.dir/includes_CXX.rsp
+CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.obj: C:/Users/diego/Documents/GitHub/GameMaxxing/SFMLObjects/GameCard.cpp
+CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.obj: CMakeFiles/GameMaxxing.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\diego\Documents\GitHub\GameMaxxing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.obj"
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.obj -MF CMakeFiles\GameMaxxing.dir\SFMLObjects\GameCard.cpp.obj.d -o CMakeFiles\GameMaxxing.dir\SFMLObjects\GameCard.cpp.obj -c C:\Users\diego\Documents\GitHub\GameMaxxing\SFMLObjects\GameCard.cpp
+
+CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.i"
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\diego\Documents\GitHub\GameMaxxing\SFMLObjects\GameCard.cpp > CMakeFiles\GameMaxxing.dir\SFMLObjects\GameCard.cpp.i
+
+CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.s"
+	C:\mingw\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\diego\Documents\GitHub\GameMaxxing\SFMLObjects\GameCard.cpp -o CMakeFiles\GameMaxxing.dir\SFMLObjects\GameCard.cpp.s
 
 # Object files for target GameMaxxing
 GameMaxxing_OBJECTS = \
 "CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj" \
-"CMakeFiles/GameMaxxing.dir/src/main.cpp.obj"
+"CMakeFiles/GameMaxxing.dir/src/main.cpp.obj" \
+"CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.obj" \
+"CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.obj" \
+"CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.obj"
 
 # External object files for target GameMaxxing
 GameMaxxing_EXTERNAL_OBJECTS =
 
 GameMaxxing.exe: CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj
 GameMaxxing.exe: CMakeFiles/GameMaxxing.dir/src/main.cpp.obj
+GameMaxxing.exe: CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.obj
+GameMaxxing.exe: CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.obj
+GameMaxxing.exe: CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.obj
 GameMaxxing.exe: CMakeFiles/GameMaxxing.dir/build.make
 GameMaxxing.exe: CMakeFiles/GameMaxxing.dir/linkLibs.rsp
 GameMaxxing.exe: CMakeFiles/GameMaxxing.dir/objects1.rsp
 GameMaxxing.exe: CMakeFiles/GameMaxxing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\diego\Documents\GitHub\GameMaxxing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable GameMaxxing.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\diego\Documents\GitHub\GameMaxxing\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable GameMaxxing.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\GameMaxxing.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

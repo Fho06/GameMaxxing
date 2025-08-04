@@ -1,4 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.obj"
+  "CMakeFiles/GameMaxxing.dir/SFMLObjects/Button.cpp.obj.d"
+  "CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.obj"
+  "CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.obj.d"
+  "CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.obj"
+  "CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.obj.d"
   "CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj"
   "CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj.d"
   "CMakeFiles/GameMaxxing.dir/src/main.cpp.obj"
