@@ -8,8 +8,54 @@
 #include "../SFMLObjects/GameCard.h"
 #include "../SFMLObjects/Textbox.h"
 
+const sf::Color backgroundColor = sf::Color(60, 60, 60);
+const sf::Color darkBackgroundColor = sf::Color(45, 45, 45);
+const sf::Color outlineColor = sf::Color(70, 130, 180);
+
 // Kinda wish I didn't have to make this global but oh well
 int searchMode = 0;
+
+void noResultsPage() {
+    // Window Configs
+    unsigned int width = 1024;
+    unsigned int height = 768;
+
+    auto* window = new sf::RenderWindow(sf::VideoMode({ width, height }), "GameMaxxing");
+
+    // Create objects
+    sf::Font titleFont;
+    titleFont.openFromFile("../resources/OpenSans.ttf");
+
+    sf::Text mainText(titleFont);
+    mainText.setCharacterSize(60);
+    mainText.setString("Game Not Found\nTry searching for a different game");
+    mainText.setOrigin(mainText.getLocalBounds().getCenter());
+    mainText.setPosition(sf::Vector2f(width / 2, height / 2));
+    mainText.setFillColor(darkBackgroundColor);
+    mainText.setOutlineColor(outlineColor);
+    mainText.setOutlineThickness(2);
+
+    while (window->isOpen()) {
+        while (const std::optional event = window->pollEvent()) {
+            if (event->is < sf::Event::Closed>()) {
+                window->close();
+            }
+            else if (const auto keyPressed = event->getIf<sf::Event::KeyPressed>()) {
+                // Keypress Events
+                if (keyPressed->scancode == sf::Keyboard::Scancode::Escape) {
+                    window->close();
+                }
+            }
+        }
+
+        // Drawing Window
+        window->clear(darkBackgroundColor);
+
+        window->draw(mainText);
+
+        window->display();
+    }
+}
 
 void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
     // Window Configs
@@ -23,13 +69,14 @@ void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
 
     // Create objects
     sf::Font titleFont;
-    titleFont.openFromFile("../resources/Debrosee-ALPnL.ttf");
+    titleFont.openFromFile("../resources/OpenSans.ttf");
 
     sf::Font searchFont;
     searchFont.openFromFile("../resources/arial.ttf");
 
     sf::Text title(titleFont, targetGame, 75);
-    title.setPosition(sf::Vector2f(40, 500));
+    title.setOrigin(title.getLocalBounds().getCenter());
+    title.setPosition(sf::Vector2f(width / 2, 50));
     title.setOutlineThickness(2);
     title.setFillColor(backgroundColor);
     title.setOutlineColor(outlineColor);
@@ -41,18 +88,23 @@ void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
     }
     sf::Sprite bgSprite(bgTex);
     bgSprite.setScale(
-      float(width) / bgTex.getSize().x,
-      float(height)/ bgTex.getSize().y
+    sf::Vector2f(
+      float(width)  / bgTex.getSize().x,
+      float(height) / bgTex.getSize().y
+        )
     );
-
-    GameCard card1(30,130,300,600,titleFont,searchFont);
+    GameCard card1(30,130,500,600,titleFont,searchFont);
     card1.setColors(backgroundColor,darkBackgroundColor,outlineColor);
 
-    GameCard card2(690,130,300,600,titleFont,searchFont);
+    GameCard card2(560,130,500,600,titleFont,searchFont);
     card2.setColors(backgroundColor,darkBackgroundColor,outlineColor);
 
-    GameCard card3(360,130,300,600,titleFont,searchFont);
+    GameCard card3(1090,130,500,600,titleFont,searchFont);
     card3.setColors(backgroundColor,darkBackgroundColor,outlineColor);
+
+    // Only used if red black tree is being used
+    std::vector<weightedGame> gamesToBeInserted;
+    int insertedCount = 3;
 
     if (searchMode == 0) {
         weightedGame gameToInsert = gameHeap.getMax();
@@ -62,13 +114,19 @@ void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
         gameToInsert = gameHeap.getMax();
         card3.setText(gameToInsert.game.gameName, gameToInsert.game.desc);
     }
+    else if (searchMode == 1) {
+        gamesToBeInserted = gameTree.getTopK(30);
+        card1.setText(gamesToBeInserted[0].game.gameName, gamesToBeInserted[0].game.desc);
+        card2.setText(gamesToBeInserted[1].game.gameName, gamesToBeInserted[1].game.desc);
+        card3.setText(gamesToBeInserted[2].game.gameName, gamesToBeInserted[2].game.desc);
+    }
 
     while (window->isOpen()) {
         while (const std::optional event = window->pollEvent()) {
             if (event->is < sf::Event::Closed>()) {
                 window->close();
             }
-            else if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+            else if (event->is<sf::Event::MouseButtonPressed>()) {
                 // Mouse Events
                 sf::Vector2i pos = sf::Mouse::getPosition(*window);
                 if (searchMode == 0) {
@@ -83,6 +141,20 @@ void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
                     else if (card3.checkClick(sf::Vector2f(pos))) {
                         weightedGame gameToInsert = gameHeap.getMax();
                         card3.setText(gameToInsert.game.gameName, gameToInsert.game.desc);
+                    }
+                }
+                else if (searchMode == 1 && insertedCount < gamesToBeInserted.size() - 1) {
+                    if (card1.checkClick(sf::Vector2f(pos))) {
+                        card1.setText(gamesToBeInserted[insertedCount].game.gameName, gamesToBeInserted[insertedCount].game.desc);
+                        insertedCount++;
+                    }
+                    else if (card2.checkClick(sf::Vector2f(pos))) {
+                        card2.setText(gamesToBeInserted[insertedCount].game.gameName, gamesToBeInserted[insertedCount].game.desc);
+                        insertedCount++;
+                    }
+                    else if (card3.checkClick(sf::Vector2f(pos))) {
+                        card3.setText(gamesToBeInserted[insertedCount].game.gameName, gamesToBeInserted[insertedCount].game.desc);
+                        insertedCount++;
                     }
                 }
             }
@@ -121,18 +193,15 @@ std::string titlePage() {
     // Window Configs
     unsigned int width = 1024;
     unsigned int height = 768;
-    const sf::Color backgroundColor = sf::Color(60, 60, 60);
-    const sf::Color darkBackgroundColor = sf::Color(45, 45, 45);
-    const sf::Color outlineColor = sf::Color(70, 130, 180);
 
     auto* window = new sf::RenderWindow(sf::VideoMode({ width, height }), "GameMaxxing");
 
     // Create objects
     sf::Font titleFont;
-    titleFont.openFromFile("../resources/Debrosee-ALPnL.ttf");
+    titleFont.openFromFile("../resources/OpenSans.ttf");
 
     sf::Font searchFont;
-    searchFont.openFromFile("../resources/arial.ttf");
+    searchFont.openFromFile("../resources/OpenSans.ttf");
 
     //background
     sf::Texture bgTex;
@@ -141,35 +210,51 @@ std::string titlePage() {
     }
     sf::Sprite bgSprite(bgTex);
     bgSprite.setScale(
-      float(width) / bgTex.getSize().x,
-      float(height)/ bgTex.getSize().y
+    sf::Vector2f(
+      float(width)  / bgTex.getSize().x,
+      float(height) / bgTex.getSize().y
+        )
     );
-
     sf::Text title(titleFont, "Game Maxxing", 75);
-    title.setPosition(sf::Vector2f(40, 40));
+    title.setOrigin(title.getLocalBounds().getCenter());
     title.setOutlineThickness(2);
     title.setFillColor(backgroundColor);
     title.setOutlineColor(outlineColor);
+    title.setPosition(sf::Vector2f(width / 2, 100));
 
-    auto searchBox = Textbox(100, 400, 200, 30, searchFont);
+    std::vector<std::string> algorithmNames = {"Heap Backend", "Red Black Tree Backend"};
+    sf::Text modeLabel(titleFont, algorithmNames[searchMode], 75);
+    modeLabel.setCharacterSize(18);
+    modeLabel.setOrigin(modeLabel.getLocalBounds().getCenter());
+    modeLabel.setOutlineThickness(2);
+    modeLabel.setFillColor(backgroundColor);
+    modeLabel.setOutlineColor(outlineColor);
+    modeLabel.setPosition(sf::Vector2f(width / 2, 530));
 
-    auto button1 = Button(100,300,200,30);
+    auto searchBox = Textbox(300, 200, 400, 45, searchFont);
+
+    auto button1 = Button(320,300,360,60);
     button1.setOnClick(searchButtonOnClick);
     button1.setColor(backgroundColor, outlineColor);
 
-    auto changeSearchModeButton = Button(100,400,200,30);
+    auto changeSearchModeButton = Button(320,500,360,60);
     changeSearchModeButton.setOnClick(changeMode);
+    changeSearchModeButton.setColor(backgroundColor, outlineColor);
 
     while (window->isOpen()) {
         while (const std::optional event = window->pollEvent()) {
             if (event->is < sf::Event::Closed>()) {
                 window->close();
             }
-            else if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+            else if (event->is<sf::Event::MouseButtonPressed>()) {
                 // Mouse Events
                 sf::Vector2i pos = sf::Mouse::getPosition(*window);
                 button1.checkClick(pos, *window);
                 searchBox.checkClick(pos);
+                changeSearchModeButton.checkClick(pos, *window);
+                // Update model label text
+                modeLabel.setString(algorithmNames[searchMode]);
+                modeLabel.setPosition(sf::Vector2f(width / 2, 530));
             }
             else if (const auto keyPressed = event->getIf<sf::Event::KeyPressed>()) {
                 // Keypress Events
@@ -188,6 +273,10 @@ std::string titlePage() {
         window->draw(title);
         button1.draw(*window);
         searchBox.draw(*window);
+        button1.draw(*window);
+        changeSearchModeButton.draw(*window);
+        window->draw(title);
+        window->draw(modeLabel);
 
         window->display();
     }
@@ -211,7 +300,7 @@ int main(){
         }
     }
 
-    if (gameFound) {
+    if (gameFound && !targetGame.gameName.empty()) {
         Heap gameHeap;
         RedBlackTree gameTree;
 
@@ -221,14 +310,14 @@ int main(){
             }
         } else if(searchMode == 1) {
             for (auto g : mainDataset.getDataset()) {
-                gameTree.insert(weightedGame(g, targetGame.reccLevel(g)));
+                gameTree.insert(weightedGame(g, targetGame.reccLevel(g) * 1000));
             }
         }
 
         gameRecPage(titlePageOutput, gameHeap, gameTree);
     }
     else {
-        std::cout << "Game not found." << std::endl;
+        noResultsPage();
     }
 
     return 0;
