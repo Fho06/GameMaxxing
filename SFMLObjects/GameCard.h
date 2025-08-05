@@ -11,6 +11,7 @@ private:
     sf::Text gameName;
     sf::Text gameLink;
     sf::RectangleShape refreshButton;
+    sf::Text refreshText;
 public:
     GameCard(float x, float y, float width, float height, sf::Font& titleFont, sf::Font& mainTextFont);
     void draw(sf::RenderWindow& window);

@@ -2,7 +2,8 @@
 #include "GameCard.h"
 
 GameCard::GameCard(float x, float y, float width, float height, sf::Font &titleFont, sf::Font &mainTextFont): gameName(titleFont),
-    gameLink(mainTextFont){
+    gameLink(mainTextFont),
+    refreshText(mainTextFont){
     mainBody.setSize(sf::Vector2f(width, height));
     mainBody.setPosition(sf::Vector2f(x, y));
     mainBody.setFillColor(sf::Color::White);
@@ -25,6 +26,14 @@ GameCard::GameCard(float x, float y, float width, float height, sf::Font &titleF
     refreshButton.setFillColor(sf::Color::White);
     refreshButton.setOutlineColor(sf::Color::Black);
     refreshButton.setOutlineThickness(2);
+
+    refreshText.setCharacterSize(40);
+    refreshText.setString("Refresh");
+    refreshText.setOrigin(refreshText.getLocalBounds().getCenter());
+    refreshText.setPosition(sf::Vector2f(x + width / 2, y + 540));
+    refreshText.setFillColor(sf::Color::Black);
+    refreshText.setOutlineColor(sf::Color::Black);
+    refreshText.setOutlineThickness(2);
 }
 
 void GameCard::draw(sf::RenderWindow &window) {
@@ -32,6 +41,7 @@ void GameCard::draw(sf::RenderWindow &window) {
     window.draw(refreshButton);
     window.draw(gameName);
     window.draw(gameLink);
+    window.draw(refreshText);
 }
 
 void GameCard::setColors(sf::Color color1, sf::Color color2, sf::Color color3) {
@@ -40,11 +50,13 @@ void GameCard::setColors(sf::Color color1, sf::Color color2, sf::Color color3) {
     gameLink.setFillColor(color2);
     gameName.setFillColor(color2);
     refreshButton.setFillColor(color2);
+    refreshText.setFillColor(color2);
 
     mainBody.setOutlineColor(color3);
     gameName.setOutlineColor(color3);
     gameLink.setOutlineColor(color3);
     refreshButton.setOutlineColor(color3);
+    refreshText.setOutlineColor(color3);
 }
 
 void GameCard::setText(std::string title, std::string link) {
