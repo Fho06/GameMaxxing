@@ -34,6 +34,17 @@ void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
     title.setFillColor(backgroundColor);
     title.setOutlineColor(outlineColor);
 
+    //background
+    sf::Texture bgTex;
+    if (!bgTex.loadFromFile("../resources/bg4.jpg")) {
+        std::cerr << "Failed to load background\n";
+    }
+    sf::Sprite bgSprite(bgTex);
+    bgSprite.setScale(
+      float(width) / bgTex.getSize().x,
+      float(height)/ bgTex.getSize().y
+    );
+
     GameCard card1(30,130,300,600,titleFont,searchFont);
     card1.setColors(backgroundColor,darkBackgroundColor,outlineColor);
 
@@ -87,8 +98,8 @@ void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
         }
 
         // Drawing Window
-        window->clear(darkBackgroundColor);
-
+        window->clear();
+        window->draw(bgSprite);
         window->draw(title);
         card1.draw(*window);
         card2.draw(*window);
@@ -122,6 +133,17 @@ std::string titlePage() {
 
     sf::Font searchFont;
     searchFont.openFromFile("../resources/arial.ttf");
+
+    //background
+    sf::Texture bgTex;
+    if (!bgTex.loadFromFile("../resources/bg4.jpg")) {
+        std::cerr << "Failed to load background\n";
+    }
+    sf::Sprite bgSprite(bgTex);
+    bgSprite.setScale(
+      float(width) / bgTex.getSize().x,
+      float(height)/ bgTex.getSize().y
+    );
 
     sf::Text title(titleFont, "Game Maxxing", 75);
     title.setPosition(sf::Vector2f(40, 40));
@@ -161,8 +183,8 @@ std::string titlePage() {
         }
 
         // Drawing Window
-        window->clear(darkBackgroundColor);
-
+        window->clear();
+        window->draw(bgSprite);
         window->draw(title);
         button1.draw(*window);
         searchBox.draw(*window);
