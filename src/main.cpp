@@ -13,7 +13,7 @@ const sf::Color darkBackgroundColor = sf::Color(45, 45, 45);
 const sf::Color outlineColor = sf::Color(70, 130, 180);
 
 // Kinda wish I didn't have to make this global but oh well
-int searchMode = 1;
+int searchMode = 0;
 
 void noResultsPage() {
     // Window Configs
@@ -24,12 +24,16 @@ void noResultsPage() {
 
     // Create objects
     sf::Font titleFont;
-    titleFont.openFromFile("../resources/Debrosee-ALPnL.ttf");
+    titleFont.openFromFile("../resources/OpenSans.ttf");
 
     sf::Text mainText(titleFont);
-    mainText.setCharacterSize(40);
+    mainText.setCharacterSize(60);
+    mainText.setString("Game Not Found\nTry searching for a different game");
+    mainText.setOrigin(mainText.getLocalBounds().getCenter());
     mainText.setPosition(sf::Vector2f(width / 2, height / 2));
-    mainText.setString("Game Not Found");
+    mainText.setFillColor(darkBackgroundColor);
+    mainText.setOutlineColor(outlineColor);
+    mainText.setOutlineThickness(2);
 
     while (window->isOpen()) {
         while (const std::optional event = window->pollEvent()) {
@@ -55,34 +59,32 @@ void noResultsPage() {
 
 void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
     // Window Configs
-    unsigned int width = 1024;
+    unsigned int width = 1650;
     unsigned int height = 768;
-    const sf::Color backgroundColor = sf::Color(60, 60, 60);
-    const sf::Color darkBackgroundColor = sf::Color(45, 45, 45);
-    const sf::Color outlineColor = sf::Color(70, 130, 180);
 
     auto* window = new sf::RenderWindow(sf::VideoMode({ width, height }), "GameMaxxing");
 
     // Create objects
     sf::Font titleFont;
-    titleFont.openFromFile("../resources/Debrosee-ALPnL.ttf");
+    titleFont.openFromFile("../resources/OpenSans.ttf");
 
     sf::Font searchFont;
     searchFont.openFromFile("../resources/arial.ttf");
 
     sf::Text title(titleFont, targetGame, 75);
-    title.setPosition(sf::Vector2f(40, 500));
+    title.setOrigin(title.getLocalBounds().getCenter());
+    title.setPosition(sf::Vector2f(width / 2, 50));
     title.setOutlineThickness(2);
     title.setFillColor(backgroundColor);
     title.setOutlineColor(outlineColor);
 
-    GameCard card1(30,130,300,600,titleFont,searchFont);
+    GameCard card1(30,130,500,600,titleFont,searchFont);
     card1.setColors(backgroundColor,darkBackgroundColor,outlineColor);
 
-    GameCard card2(690,130,300,600,titleFont,searchFont);
+    GameCard card2(560,130,500,600,titleFont,searchFont);
     card2.setColors(backgroundColor,darkBackgroundColor,outlineColor);
 
-    GameCard card3(360,130,300,600,titleFont,searchFont);
+    GameCard card3(1090,130,500,600,titleFont,searchFont);
     card3.setColors(backgroundColor,darkBackgroundColor,outlineColor);
 
     // Only used if red black tree is being used
@@ -109,7 +111,7 @@ void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
             if (event->is < sf::Event::Closed>()) {
                 window->close();
             }
-            else if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+            else if (event->is<sf::Event::MouseButtonPressed>()) {
                 // Mouse Events
                 sf::Vector2i pos = sf::Mouse::getPosition(*window);
                 if (searchMode == 0) {
@@ -176,40 +178,39 @@ std::string titlePage() {
     // Window Configs
     unsigned int width = 1024;
     unsigned int height = 768;
-    const sf::Color backgroundColor = sf::Color(60, 60, 60);
-    const sf::Color darkBackgroundColor = sf::Color(45, 45, 45);
-    const sf::Color outlineColor = sf::Color(70, 130, 180);
 
     auto* window = new sf::RenderWindow(sf::VideoMode({ width, height }), "GameMaxxing");
 
     // Create objects
     sf::Font titleFont;
-    titleFont.openFromFile("../resources/Debrosee-ALPnL.ttf");
+    titleFont.openFromFile("../resources/OpenSans.ttf");
 
     sf::Font searchFont;
-    searchFont.openFromFile("../resources/arial.ttf");
+    searchFont.openFromFile("../resources/OpenSans.ttf");
 
     sf::Text title(titleFont, "Game Maxxing", 75);
-    title.setPosition(sf::Vector2f(40, 40));
+    title.setOrigin(title.getLocalBounds().getCenter());
     title.setOutlineThickness(2);
     title.setFillColor(backgroundColor);
     title.setOutlineColor(outlineColor);
+    title.setPosition(sf::Vector2f(width / 2, 100));
 
     std::vector<std::string> algorithmNames = {"Heap Backend", "Red Black Tree Backend"};
     sf::Text modeLabel(titleFont, algorithmNames[searchMode], 75);
-    modeLabel.setPosition(sf::Vector2f(300, 40));
+    modeLabel.setCharacterSize(18);
+    modeLabel.setOrigin(modeLabel.getLocalBounds().getCenter());
     modeLabel.setOutlineThickness(2);
     modeLabel.setFillColor(backgroundColor);
     modeLabel.setOutlineColor(outlineColor);
-    modeLabel.setCharacterSize(12);
+    modeLabel.setPosition(sf::Vector2f(width / 2, 530));
 
-    auto searchBox = Textbox(100, 250, 200, 30, searchFont);
+    auto searchBox = Textbox(300, 200, 400, 45, searchFont);
 
-    auto button1 = Button(100,300,200,30);
+    auto button1 = Button(320,300,360,60);
     button1.setOnClick(searchButtonOnClick);
     button1.setColor(backgroundColor, outlineColor);
 
-    auto changeSearchModeButton = Button(100,400,200,30);
+    auto changeSearchModeButton = Button(320,500,360,60);
     changeSearchModeButton.setOnClick(changeMode);
     changeSearchModeButton.setColor(backgroundColor, outlineColor);
 
@@ -218,13 +219,15 @@ std::string titlePage() {
             if (event->is < sf::Event::Closed>()) {
                 window->close();
             }
-            else if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+            else if (event->is<sf::Event::MouseButtonPressed>()) {
                 // Mouse Events
                 sf::Vector2i pos = sf::Mouse::getPosition(*window);
                 button1.checkClick(pos, *window);
                 searchBox.checkClick(pos);
                 changeSearchModeButton.checkClick(pos, *window);
+                // Update model label text
                 modeLabel.setString(algorithmNames[searchMode]);
+                modeLabel.setPosition(sf::Vector2f(width / 2, 530));
             }
             else if (const auto keyPressed = event->getIf<sf::Event::KeyPressed>()) {
                 // Keypress Events
@@ -240,11 +243,11 @@ std::string titlePage() {
         // Drawing Window
         window->clear(darkBackgroundColor);
 
+        searchBox.draw(*window);
+        button1.draw(*window);
+        changeSearchModeButton.draw(*window);
         window->draw(title);
         window->draw(modeLabel);
-        button1.draw(*window);
-        searchBox.draw(*window);
-        changeSearchModeButton.draw(*window);
 
         window->display();
     }
