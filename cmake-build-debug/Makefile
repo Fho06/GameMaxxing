@@ -200,6 +200,30 @@ SFMLObjects/Textbox.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.s
 .PHONY : SFMLObjects/Textbox.cpp.s
 
+SFMLObjects/ToggleSwitch.obj: SFMLObjects/ToggleSwitch.cpp.obj
+.PHONY : SFMLObjects/ToggleSwitch.obj
+
+# target to build an object file
+SFMLObjects/ToggleSwitch.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/SFMLObjects/ToggleSwitch.cpp.obj
+.PHONY : SFMLObjects/ToggleSwitch.cpp.obj
+
+SFMLObjects/ToggleSwitch.i: SFMLObjects/ToggleSwitch.cpp.i
+.PHONY : SFMLObjects/ToggleSwitch.i
+
+# target to preprocess a source file
+SFMLObjects/ToggleSwitch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/SFMLObjects/ToggleSwitch.cpp.i
+.PHONY : SFMLObjects/ToggleSwitch.cpp.i
+
+SFMLObjects/ToggleSwitch.s: SFMLObjects/ToggleSwitch.cpp.s
+.PHONY : SFMLObjects/ToggleSwitch.s
+
+# target to generate assembly for a file
+SFMLObjects/ToggleSwitch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameMaxxing.dir\build.make CMakeFiles/GameMaxxing.dir/SFMLObjects/ToggleSwitch.cpp.s
+.PHONY : SFMLObjects/ToggleSwitch.cpp.s
+
 src/DatasetHLTB.obj: src/DatasetHLTB.cpp.obj
 .PHONY : src/DatasetHLTB.obj
 
@@ -338,6 +362,9 @@ help:
 	@echo ... SFMLObjects/Textbox.obj
 	@echo ... SFMLObjects/Textbox.i
 	@echo ... SFMLObjects/Textbox.s
+	@echo ... SFMLObjects/ToggleSwitch.obj
+	@echo ... SFMLObjects/ToggleSwitch.i
+	@echo ... SFMLObjects/ToggleSwitch.s
 	@echo ... src/DatasetHLTB.obj
 	@echo ... src/DatasetHLTB.i
 	@echo ... src/DatasetHLTB.s

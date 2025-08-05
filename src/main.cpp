@@ -59,8 +59,11 @@ void noResultsPage() {
 
 void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
     // Window Configs
-    unsigned int width = 1650;
+    unsigned int width = 1024;
     unsigned int height = 768;
+    const sf::Color backgroundColor = sf::Color(60, 60, 60);
+    const sf::Color darkBackgroundColor = sf::Color(45, 45, 45);
+    const sf::Color outlineColor = sf::Color(70, 130, 180);
 
     auto* window = new sf::RenderWindow(sf::VideoMode({ width, height }), "GameMaxxing");
 
@@ -78,6 +81,18 @@ void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
     title.setFillColor(backgroundColor);
     title.setOutlineColor(outlineColor);
 
+    //background
+    sf::Texture bgTex;
+    if (!bgTex.loadFromFile("../resources/bg4.jpg")) {
+        std::cerr << "Failed to load background\n";
+    }
+    sf::Sprite bgSprite(bgTex);
+    bgSprite.setScale(
+    sf::Vector2f(
+      float(width)  / bgTex.getSize().x,
+      float(height) / bgTex.getSize().y
+        )
+    );
     GameCard card1(30,130,500,600,titleFont,searchFont);
     card1.setColors(backgroundColor,darkBackgroundColor,outlineColor);
 
@@ -155,8 +170,8 @@ void gameRecPage(std::string targetGame, Heap gameHeap, RedBlackTree gameTree) {
         }
 
         // Drawing Window
-        window->clear(darkBackgroundColor);
-
+        window->clear();
+        window->draw(bgSprite);
         window->draw(title);
         card1.draw(*window);
         card2.draw(*window);
@@ -188,6 +203,18 @@ std::string titlePage() {
     sf::Font searchFont;
     searchFont.openFromFile("../resources/OpenSans.ttf");
 
+    //background
+    sf::Texture bgTex;
+    if (!bgTex.loadFromFile("../resources/bg4.jpg")) {
+        std::cerr << "Failed to load background\n";
+    }
+    sf::Sprite bgSprite(bgTex);
+    bgSprite.setScale(
+    sf::Vector2f(
+      float(width)  / bgTex.getSize().x,
+      float(height) / bgTex.getSize().y
+        )
+    );
     sf::Text title(titleFont, "Game Maxxing", 75);
     title.setOrigin(title.getLocalBounds().getCenter());
     title.setOutlineThickness(2);
@@ -241,8 +268,10 @@ std::string titlePage() {
         }
 
         // Drawing Window
-        window->clear(darkBackgroundColor);
-
+        window->clear();
+        window->draw(bgSprite);
+        window->draw(title);
+        button1.draw(*window);
         searchBox.draw(*window);
         button1.draw(*window);
         changeSearchModeButton.draw(*window);

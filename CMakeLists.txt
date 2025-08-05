@@ -25,6 +25,8 @@ add_executable(
         "SFMLObjects/Textbox.h"
         "SFMLObjects/GameCard.cpp"
         "SFMLObjects/GameCard.h"
+        SFMLObjects/ToggleSwitch.cpp
+        SFMLObjects/ToggleSwitch.h
         src/RedBlackTree.cpp
         src/RedBlackTree.h
         src/Heap.cpp

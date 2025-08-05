@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GameMaxxing.dir/SFMLObjects/GameCard.cpp.obj.d"
   "CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.obj"
   "CMakeFiles/GameMaxxing.dir/SFMLObjects/Textbox.cpp.obj.d"
+  "CMakeFiles/GameMaxxing.dir/SFMLObjects/ToggleSwitch.cpp.obj"
+  "CMakeFiles/GameMaxxing.dir/SFMLObjects/ToggleSwitch.cpp.obj.d"
   "CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj"
   "CMakeFiles/GameMaxxing.dir/src/DatasetHLTB.cpp.obj.d"
   "CMakeFiles/GameMaxxing.dir/src/Game.cpp.obj"
